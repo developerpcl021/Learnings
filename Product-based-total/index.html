@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        .user-table .user-data div {
+            width: 20%;
+            height: 120px;
+            text-align: center;
+        }
+
+        .user-table {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100vh;
+            padding-bottom: 24px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: rgb(152, 152, 152);
+            border-radius: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.692);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="px-5 user-table">
+        <div class="text-end">
+            <button class="btn btn-dark fw-bold">
+                Add Item Row
+            </button>
+        </div>
+        <div
+            class="d-flex justify-content-between align-items-center border border-black user-data position-relative top-0">
+            <div class="p-5 border border-black fw-bold">
+                Sr No.
+            </div>
+            <div class="p-5 border border-black fw-bold">
+                Item Name
+            </div>
+            <div class="p-5 border border-black fw-bold">
+                Quantity
+            </div>
+            <div class="p-5 border border-black fw-bold">
+                price
+            </div>
+            <div class="p-5 border border-black fw-bold">
+                Total
+            </div>
+        </div>
+
+        <div class="overflow-y-auto" style="height:60%;width:100%;">
+            <div class="d-flex justify-content-between align-items-center border user-data">
+                <div class="p-5 border-start border-end">
+                    01
+                </div>
+                <div class="p-5 border-start border-end">
+                    Toy car
+                </div>
+                <div class="p-5 border-start border-end">
+                    01
+                </div>
+                <div class="p-5 border-start border-end">
+                    500
+                </div>
+                <div class="p-5 border-start border-end">
+                    500
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center border user-data">
+                <div class="p-5 border-start border-end">
+                    02
+                </div>
+                <div class="p-5 border-start border-end">
+                    bike
+                </div>
+                <div class="p-5 border-start border-end">
+                    01
+                </div>
+                <div class="p-5 border-start border-end">
+                    50000
+                </div>
+                <div class="p-5 border-start border-end">
+                    50000
+                </div>
+            </div>
+        </div>
+
+        <div class="grand-total d-flex justify-content-between align-items-center border border-black user-data">
+            <div class="p-5 border-start border-end">
+                Grand Total
+            </div>
+            <div class="p-5 border-start border-end">
+
+            </div>
+            <div class="p-5 border-start border-end">
+                02
+            </div>
+            <div class="p-5 border-start border-end">
+                50000
+            </div>
+            <div class="p-5 border-start border-end">
+                50000
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+

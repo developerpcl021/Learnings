@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+
+        section,
+        div {
+            height: 500px;
+            margin-bottom: 20px;
+        }
+
+        .dev {
+            display: flex;
+            height: 100%;
+            align-items: center;
+        }
+
+        .dev>div {
+            width: 50%;
+            height: 1000px;
+        }
+
+        #section1 {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dev">
+        <div></div>
+        <section id="section1">Section 1</section>
+    </div>
+    <div id="section2">Section 2</div>
+    <div id="section3">Section 3</div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var sections = document.querySelectorAll('section');
+
+            for (var i = 0; i < sections.length; i++) {
+                var section = sections[i];
+                var bounding = section.getBoundingClientRect();
+
+                if (bounding.top <= 0 && bounding.bottom >= 0) {
+                    section.classList.add('highlight');
+                } else {
+                    section.classList.remove('highlight');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

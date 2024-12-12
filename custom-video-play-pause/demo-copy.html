@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sound off</title>
+
+    <!-- slick carousel css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css cdn -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- mmenu css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css"
+        integrity="sha512-nNatP1G6CEh43irXY/GN4cDcLRX/R0jAYAV/ulFZcotSXcuIQE5Do4TuDOYNAD2SCIpmIbaYSllyjTysSCkpEw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/core/theme/mmenu.theme.min.css"
+        integrity="sha512-shQnDlpoRRnCablPYG6byTuNMaycE9VIXWRBHCTn5GoMC6+SsjxAK1QZNYiSLAU4QV9L3U7+LGgdpbz2zYFDrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .costumers-testimonials {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            gap: 40px;
+            margin: 50px 0px;
+        }
+
+        .costumers-testimonials .contained-vid {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .circle-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            width: 120px;
+            height: 120px;
+        }
+
+        .contained-vid img[src="images/light-pause-icon.png"] {
+            opacity: 0;
+            transition: all .5s ease-in-out;
+        }
+
+        .contained-vid:hover img[src="images/light-pause-icon.png"] {
+            opacity: 1;
+            transition: all .5s ease-in-out;
+        }
+    </style>
+
+<body>
+    <!-- header -->
+
+    <section>
+        <div class="customer-sec">
+            <h3 class="ff_primary fs_extreme text-center fw_bold">
+                Our Customers Love SoundOff <br>
+                Because it Works!
+            </h3>
+
+            <div class="costumers-testimonials">
+                <div class="contained-vid">
+                    <video style="width: 100%;" class="video-played">
+                        <source src="videos/testimonials-item-1.mp4">
+                    </video>
+
+                    <img src="images/light-play-icon.png" alt="light-play-icon" class="circle-play">
+                </div>
+                <div class="contained-vid">
+                    <video style="width: 100%;" class="video-played">
+                        <source src="videos/testimonials-item-2.mp4">
+                    </video>
+
+                    <img src="images/light-play-icon.png" alt="light-play-icon" class="circle-play">
+                </div>
+                <div class="contained-vid">
+                    <video style="width: 100%;" class="video-played">
+                        <source src="videos/testimonials-item-3.mp4">
+                    </video>
+
+                    <img src="images/light-play-icon.png" alt="light-play-icon" class="circle-play">
+                </div>
+                <div class="contained-vid">
+                    <video style="width: 100%;" class="video-played">
+                        <source src="videos/testimonials-item-4.mp4">
+                    </video>
+
+                    <img src="images/light-play-icon.png" alt="light-play-icon" class="circle-play">
+                </div>
+                <div class="contained-vid">
+                    <div class="videos-p">
+                        <div class="play-v">
+                            <video style="width: 100%;" class="video-played">
+                                <source src="videos/testimonials-item-5.mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="icon-p">
+                        <div class="press-icon">
+                            <img src="images/light-play-icon.png" alt="light-play-icon" class="circle-play">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ######################### -->
+    <!-- jQuery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <!-- slick carousel js cdn -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- mmenu js cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.js"
+        integrity="sha512-l2fHTYCLVbhRDc5CZWrkKJ06JWFjG5etNQ4G85PbyRiHP769IiVDmhwI0BYSFOXYJUYRmaq5PvfaxacZm9eqhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/core/theme/mmenu.theme.min.js"
+        integrity="sha512-YHBeo1uO5g0uXexSnaQ503Ps7xfu/ZCNCM/Uj7lreGvi3sKCKq75KU4l9xcPtq62fb/Vwi4yt2avK14v9N8Z7g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- custom js cdn -->
+    <script>
+        $(document).ready(function () {
+            $(".circle-play").on("click", function () {
+                var $video = $(this).closest(".contained-vid").find(".video-played")[0];
+                if ($video.paused) {
+                    $video.play();
+                    $(this).attr("src", "images/light-pause-icon.png");
+                } else {
+                    $video.pause();
+                    $(this).attr("src", "images/light-play-icon.png");
+                }
+
+                $video.onended = () => {
+                    $(this).attr("src", "images/light-play-icon.png");
+                };
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

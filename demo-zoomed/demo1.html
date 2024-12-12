@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move-right {
+            0% {
+                background-position: initial;
+            }
+            
+            100% {
+                background-position: 0px 200px;
+            }
+        }
+
+        .box1 {
+            background: repeating-linear-gradient(-45deg,
+                    #0022ff,
+                    #0021fa 5%,
+                    #65e7a6 5%,
+                    #ffee00 10%);
+            background-size: 100px 100px;
+            animation: move-right 2s linear infinite;
+            height: 50vh;
+            width: 50vw;
+        }
+
+        @keyframes move-left {
+            0% {
+                background-position: initial;
+            }
+
+            100% {
+                background-position: 0px 200px;
+            }
+        }
+
+        .box2 {
+            background: repeating-linear-gradient(45deg,
+                    #0022ff,
+                    #0021fa 5%,
+                    #65e7a6 5%,
+                    #ffee00 10%);
+            background-size: 100px 100px;
+            animation: move-left 2s linear infinite;
+            height: 50vh;
+            width: 50vw;
+        }
+
+        @keyframes move-up {
+            0% {
+                background-position: initial;
+            }
+
+            100% {
+                background-position: 200px 0px;
+            }
+        }
+
+        .box3 {
+            background: repeating-linear-gradient(45deg,
+                    #0022ff,
+                    #0021fa 5%,
+                    #65e7a6 5%,
+                    #ffee00 10%);
+            background-size: 100px 100px;
+            animation: move-up 2s linear infinite;
+            height: 50vh;
+            width: 50vw;
+        }
+        @keyframes move-left {
+            0% {
+                background-position: initial;
+            }
+
+            100% {
+                background-position: 0px 200px;
+            }
+        }
+
+        .box4 {
+            background: repeating-linear-gradient(45deg,
+                    #0022ff,
+                    #0021fa 5%,
+                    #65e7a6 5%,
+                    #ffee00 10%);
+            background-size: 100px 100px;
+            animation: move-left 2s linear infinite;
+            height: 50vh;
+            width: 50vw;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="display: flex;height: 50vh;">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    <div style="display: flex;height: 100vh;">
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <!-- 
+    <script>
+        alert("hello suman ji")
+    </script> -->
+</body>
+
+</html>

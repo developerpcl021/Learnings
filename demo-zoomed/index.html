@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* CSS */
+    /* CSS */
+    #product-modal {
+      position: fixed;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.8);
+      /* Semi-transparent background for the modal */
+      visibility: hidden;
+      width: 40%;
+      /* Adjust the width of the modal */
+      height: 50%;
+      /* Adjust the height of the modal */
+      /* Additional styling properties */
+    }
+
+    #modal-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: 0% 0%;
+      /* Additional styling properties */
+    }
+
+    .product-image {
+      height: 300px;
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HTML -->
+  <img class="product-image" src="./bangle.jfif" alt="Product 1">
+  <img class="product-image" src="./bangle-1.jfif" alt="Product 2">
+
+  <div id="product-modal">
+    <div id="modal-image"></div>
+  </div>
+
+
+
+
+  <script>
+    // JavaScript
+    //var productImages = document.querySelectorAll('.product-image');
+    //var modalContainer = document.getElementById('product-modal');
+    //var modalImage = document.getElementById('modal-image');
+    //var currentImage = null;
+
+    //productImages.forEach(function (image, index) {
+    //      image.addEventListener('mouseover', function () {
+    //modalContainer.style.visibility = 'visible';
+    //modalImage.style.backgroundImage = `url('${this.src}')`;
+    //currentImage = index;
+    //      });
+
+    //      image.addEventListener('mousemove', function (event) {
+    //var rect = this.getBoundingClientRect();
+    //var offsetX = event.clientX - rect.left;
+    //var offsetY = event.clientY - rect.top;
+    //var percentX = (offsetX / this.clientWidth) * 100;
+    //var percentY = (offsetY / this.clientHeight) * 100;
+
+    //if (currentImage === 0) {
+    //modalImage.style.backgroundPositionX = `${percentX}%`;
+    //modalImage.style.backgroundPositionY = `${percentY}%`;
+    //} else if (currentImage === 1) {
+    //modalImage.style.backgroundPositionX = `${percentX}%`;
+    //modalImage.style.backgroundPositionY = `${percentY}%`;
+    //} else {
+    //modalImage.style.backgroundPosition = 'center';
+    //}
+    //      });
+
+    //      image.addEventListener('mouseout', function () {
+    //modalContainer.style.visibility = 'hidden';
+    //currentImage = null;
+    //      });
+    //});
+
+    // JavaScript
+var productImages = document.querySelectorAll('.product-image');
+var modalContainer = document.getElementById('product-modal');
+var modalImage = document.getElementById('modal-image');
+var currentImage = null;
+
+productImages.forEach(function(image, index) {
+  image.addEventListener('mouseover', function() {
+    modalContainer.style.visibility = 'visible';
+    modalImage.style.backgroundImage = `url('${this.src}')`;
+    currentImage = index;
+  });
+
+  image.addEventListener('mousemove', function(event) {
+    var rect = this.getBoundingClientRect();
+    var offsetX = event.clientX - rect.left;
+    var offsetY = event.clientY - rect.top;
+    var percentX = (offsetX / this.clientWidth) * 100;
+    var percentY = (offsetY / this.clientHeight) * 100;
+
+    if (currentImage === 0) {
+      modalImage.style.backgroundPosition = `${percentX}% ${percentY}%`;
+    } else if (currentImage === 1) {
+      modalImage.style.backgroundPosition = `${percentX}% ${percentY}%`;
+    }
+  });
+
+  image.addEventListener('mouseout', function() {
+    modalContainer.style.visibility = 'hidden';
+    currentImage = null;
+  });
+});
+
+  </script>
+</body>
+
+</html>

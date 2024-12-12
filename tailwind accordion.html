@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="w-full max-w-md mx-auto">
+        <fieldset class="space-y-2">
+            <!-- Accordion Item 1 -->
+            <input id="accordion-item-1" class="peer/accordion-item-1 hidden" type="radio" name="accordion" checked />
+            <label for="accordion-item-1" class="block bg-blue-500 text-white p-4 cursor-pointer">
+                <span class="text-xl">Accordion Title 1</span>
+            </label>
+            <div class="hidden peer-checked/accordion-item-1:block bg-white shadow-md mt-2 p-4">
+                <p>
+                    This is the content of the accordion item 1. It is visible when the item is checked.
+                </p>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <input id="accordion-item-2" class="peer/accordion-item-2 hidden" type="radio" name="accordion" />
+            <label for="accordion-item-2" class="block bg-blue-500 text-white p-4 cursor-pointer">
+                <span class="text-xl">Accordion Title 2</span>
+            </label>
+            <div class="hidden peer-checked/accordion-item-2:block bg-white shadow-md mt-2 p-4">
+                <p>
+                    This is the content of the accordion item 2. It is visible when the item is checked.
+                </p>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <input id="accordion-item-3" class="peer/accordion-item-3 hidden" type="radio" name="accordion" />
+            <label for="accordion-item-3" class="block bg-blue-500 text-white p-4 cursor-pointer">
+                <span class="text-xl">Accordion Title 3</span>
+            </label>
+            <div class="hidden peer-checked/accordion-item-3:block bg-white shadow-md mt-2 p-4">
+                <p>
+                    This is the content of the accordion item 3. It is visible when the item is checked.
+                </p>
+            </div>
+        </fieldset>
+    </div>
+
+</body>
+
+</html>

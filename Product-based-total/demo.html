@@ -1,0 +1,408 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #addButton {
+            margin-bottom: 10px;
+        }
+
+        .new-row-buttons {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable">
+        <tr>
+            <th>Sr No</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </table>
+
+    <button id="addButton">Add Row</button>
+
+    <div id="newRowButtons" style="display: none;">
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+    </div>
+
+    <script>
+        var addButton = document.getElementById("addButton");
+        var newRowButtons = document.getElementById("newRowButtons");
+        var saveButton = document.getElementById("saveButton");
+        var cancelButton = document.getElementById("cancelButton");
+
+        window.addEventListener("load", function () {
+            loadSavedData();
+            addButton.addEventListener("click", addRow);
+            saveButton.addEventListener("click", handleRowAction);
+            cancelButton.addEventListener("click", handleRowAction);
+        });
+
+        function addRow() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(table.rows.length);
+
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+
+            cell1.innerHTML = table.rows.length - 1;
+            cell2.innerHTML = '<input type="text" class="item-input">';
+            cell3.innerHTML = '<input type="text" class="quantity-input">';
+            cell4.innerHTML = '<input type="text" class="price-input">';
+            cell5.innerHTML = '<input type="text" class="total-input" readonly>';
+
+            newRowButtons.style.display = "";
+            saveButton.dataset.rowIndex = row.rowIndex;
+            cancelButton.dataset.rowIndex = row.rowIndex;
+
+            saveData();
+        }
+
+        function handleRowAction(event) {
+            var button = event.target;
+            var rowIndex = button.dataset.rowIndex;
+
+            if (button.id === "saveButton") {
+                var table = document.getElementById("myTable");
+                var row = table.rows[rowIndex];
+                var itemInput = row.querySelector(".item-input");
+                var quantityInput = row.querySelector(".quantity-input");
+                var priceInput = row.querySelector(".price-input");
+                var totalInput = row.querySelector(".total-input");
+
+                totalInput.value = (parseFloat(quantityInput.value) * parseFloat(priceInput.value)).toFixed(2);
+
+                saveData();
+            } else if (button.id === "cancelButton") {
+                var table = document.getElementById("myTable");
+                table.deleteRow(rowIndex);
+                newRowButtons.style.display = "none";
+
+                saveData();
+            }
+        }
+
+        function saveData() {
+            var table = document.getElementById("myTable");
+            var rowData = [];
+
+            for (var i = 1; i < table.rows.length; i++) {
+                var row = table.rows[i];
+                var itemInput = row.querySelector(".item-input");
+                var quantityInput = row.querySelector(".quantity-input");
+                var priceInput = row.querySelector(".price-input");
+                var totalInput = row.querySelector(".total-input");
+
+                var rowDataItem = [
+                    itemInput.value,
+                    quantityInput.value,
+                    priceInput.value,
+                    totalInput.value
+                ];
+
+                rowData.push(rowDataItem);
+            }
+
+            localStorage.setItem("tableData", JSON.stringify(rowData));
+        }
+
+        function loadSavedData() {
+            var savedData = localStorage.getItem("tableData");
+            if (savedData) {
+                var table = document.getElementById("myTable");
+                var rowData = JSON.parse(savedData);
+
+                for (var i = 0; i < rowData.length; i++) {
+                    var row = table.insertRow(table.rows.length);
+
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+
+                    cell1.innerHTML = i + 1;
+                    cell2.innerHTML = '<input type="text" class="item-input" value="' + (rowData[i][0] || "") + '">';
+                    cell3.innerHTML = '<input type="text" class="quantity-input" value="' + (rowData[i][1] || "") +
+                    '">';
+                    cell4.innerHTML = '<input type="text" class="price-input" value="' + (rowData[i][2] || "") + '">';
+                    cell5.innerHTML = '<input type="text" class="total-input" value="' + (rowData[i][3] || "") +
+                        '" readonly>';
+
+                    var quantityInput = row.querySelector(".quantity-input");
+                    var priceInput = row.querySelector(".price-input");
+                    var totalInput = row.querySelector(".total-input");
+                    totalInput.value = (parseFloat(quantityInput.value) * parseFloat(priceInput.value)).toFixed(2);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        table {
+            width: 96%;
+            margin: 0px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #addButton {
+            margin-bottom: 10px;
+        }
+
+        .new-row-buttons {
+            display: none;
+        }
+
+        #item-input1,
+        #quantity-input1,
+        #price-input1,
+        #total-input1,
+        #item-input1:focus,
+        #quantity-input1:focus,
+        #price-input1:focus,
+        #total-input1:focus {
+            border: none !important;
+            border-radius: 8px;
+            outline: none !important;
+        }
+
+        .item-input1,
+        .quantity-input1,
+        .price-input1,
+        .total-input1,
+        .item-input1:focus,
+        .quantity-input1:focus,
+        .price-input1:focus,
+        .total-input1:focus {
+            border: 2px solid grey !important;
+            border-radius: 8px;
+            outline: none !important;
+        }
+
+        td,
+        th {
+            text-align: center;
+            border: 2px solid grey;
+            width: 120px;
+        }
+
+        input {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-end pe-5">
+        <button id="addButton" class="btn btn-dark px-5 fw-bold">Add Row</button>
+
+    </div>
+    <table id="myTable" class="border">
+        <tr>
+            <th class="text-center">Sr No</th>
+            <th class="text-center">Item</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Total (In Rupees)</th>
+        </tr>
+    </table>
+    <div id="newRowButtons" style="display: none;" class="text-end pe-5 mt-3">
+        <button id="saveButton" class="btn btn-success px-4 fw-bold">Save</button>
+        <button id="cancelButton" class="btn btn-danger px-4 fw-bold">Cancel</button>
+    </div>
+
+
+
+    <script>
+        var addButton = document.getElementById("addButton");
+        var newRowButtons = document.getElementById("newRowButtons");
+        var saveButton = document.getElementById("saveButton");
+        var cancelButton = document.getElementById("cancelButton");
+
+        // Load saved data from local storage when the page is loaded
+        window.addEventListener("load", function () {
+            loadSavedData();
+            addButton.addEventListener("click", addRow);
+            saveButton.addEventListener("click", handleRowAction);
+            cancelButton.addEventListener("click", handleRowAction);
+        });
+
+        function addRow() {
+            var table = document.getElementById("myTable");
+            var lastRow = table.rows[table.rows.length - 1];
+
+            if (lastRow && isRowEmpty(lastRow)) {
+                return; // Don't add a new row if the last inserted row is empty
+            }
+
+            var row = table.insertRow(table.rows.length);
+
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+
+            // Increment the Sr No for each new row
+            cell1.innerHTML = table.rows.length - 1;
+            cell2.innerHTML = '<input type="text" class="item-input1">';
+            cell3.innerHTML = '<input type="text" class="quantity-input1">';
+            cell4.innerHTML = '<input type="text" class="price-input1">';
+            cell5.innerHTML = '<input type="text" class="total-input1" readonly>';
+
+            // Show the buttons for the new row
+            newRowButtons.style.display = "";
+            saveButton.dataset.rowIndex = row.rowIndex;
+            cancelButton.dataset.rowIndex = row.rowIndex;
+        }
+
+        function handleRowAction(event) {
+            var button = event.target;
+            var rowIndex = button.dataset.rowIndex;
+
+            if (button.id === "saveButton") {
+                // Handle save action
+                var table = document.getElementById("myTable");
+                var row = table.rows[rowIndex];
+                var itemInput = row.querySelector(".item-input1");
+                var quantityInput = row.querySelector(".quantity-input1");
+                var priceInput = row.querySelector(".price-input1");
+                var totalInput = row.querySelector(".total-input1");
+
+                if (itemInput.value.trim() === "" || quantityInput.value.trim() === "" || priceInput.value.trim() ===
+                    "") {
+                    return; // Don't save data if any of the inputs are empty
+                }
+
+                totalInput.value = (parseFloat(quantityInput.value) * parseFloat(priceInput.value)).toFixed(2);
+
+                // Save the table data to local storage
+                saveData();
+            } else if (button.id === "cancelButton") {
+                // Handle cancel action
+                var table = document.getElementById("myTable");
+                table.deleteRow(rowIndex);
+                newRowButtons.style.display = "none";
+
+                // Save the table data to local storage
+                saveData();
+                window.location.reload(true);
+            }
+        }
+
+        function saveData() {
+            var table = document.getElementById("myTable");
+            var rowData = [];
+
+            // Collect the data from each row and store it in an array
+            for (var i = 1; i < table.rows.length; i++) {
+                var row = table.rows[i];
+                var itemInput = row.querySelector(".item-input1");
+                var quantityInput = row.querySelector(".quantity-input1");
+                var priceInput = row.querySelector(".price-input1");
+                var totalInput = row.querySelector(".total-input1");
+
+                var rowDataItem = [
+                    itemInput.value,
+                    quantityInput.value,
+                    priceInput.value,
+                    totalInput.value
+                ];
+
+                rowData.push(rowDataItem);
+            }
+
+            // Store the data in local storage
+            localStorage.setItem("tableData", JSON.stringify(rowData));
+        }
+
+        function loadSavedData() {
+            var savedData = localStorage.getItem("tableData");
+            if (savedData) {
+                var table = document.getElementById("myTable");
+                var rowData = JSON.parse(savedData);
+
+                // Insert rows and populate with saved data
+                for (var i = 0; i < rowData.length; i++) {
+                    var row = table.insertRow(table.rows.length);
+
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+
+                    cell1.innerHTML = i + 1;
+                    cell2.innerHTML = '<input type="text" id="item-input1" class="item-input1" value="' + (rowData[i][
+                        0
+                    ] || "") + '">';
+                    cell3.innerHTML = '<input type="text" id="quantity-input1" class="quantity-input1" value="' + (
+                            rowData[i][1] || "") +
+                        '">';
+                    cell4.innerHTML = '<input type="text" id="price-input1" class="price-input1" value="' + (rowData[i][
+                        2
+                    ] || "") + '">';
+                    cell5.innerHTML = '<input type="text" id="total-input1" class="total-input1" value="' + (rowData[i][
+                            3
+                        ] || "") +
+                        '" readonly>';
+                }
+            }
+        }
+
+        function isRowEmpty(row) {
+            var inputs = row.querySelectorAll("input");
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value.trim() === "") {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

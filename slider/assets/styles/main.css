@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+* {
+    text-decoration: none !important;
+    list-style: none !important;
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    --fs_xsm: 12px;
+    --fs_sm: 16px;
+    --fs_md: 20px;
+    --fs_lg: 24px;
+    --fs_xl: 32px;
+    --fs_xxl: 44px;
+    --fs_rare: 56px;
+    --fs_extreme: 64px;
+
+    /* font-family */
+    --ff_primary: 'Roboto Mono', sans-serif;
+    --ff_secondary: 'Mulish', sans-serif;
+
+}
+
+.fs_xsm {
+    font-size: var(--fs_xsm);
+}
+
+.fs_sm {
+    font-size: var(--fs_sm);
+}
+
+.fs_md {
+    font-size: var(--fs_md);
+}
+
+.fs_lg {
+    font-size: var(--fs_lg);
+}
+
+.fs_xl {
+    font-size: var(--fs_xl);
+}
+
+.fs_xxl {
+    font-size: var(--fs_xxl);
+}
+
+.fs_rare {
+    font-size: var(--fs_rare);
+}
+
+.fs_extreme {
+    font-size: var(--fs_extreme);
+}
+
+.ff_secondary {
+    font-family: var(--ff_secondary);
+}
+
+.ff_primary {
+    font-family: var(--ff_primary);
+}
+
+
+/* slider study abroad */
+.slider {
+    --slider-padding: 1rem;
+    --slider-column-gap: 1rem;
+    --slide-width: 25%;
+    --slide-min-width: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__track {
+    display: flex;
+    overflow-x: auto;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+    padding-inline: var(--slider-padding);
+    scroll-behavior: smooth;
+    list-style-type: none;
+    padding: 0;
+    margin-right: calc(var(--slider-column-gap) * -1);
+    scrollbar-width: none;
+}
+
+.slider__track>* {
+    flex: 0 0 var(--slide-width);
+    min-width: var(--slide-min-width);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    padding-right: var(--slider-column-gap);
+}
+
+.slider__track::-webkit-scrollbar {
+    display: none;
+}
+
+.slider__buttons {
+    margin-top: 1rem;
+}
+
+.slider__buttons [disabled] {
+    opacity: 0.5;
+}
+
+.slide-container {
+    height: 340px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    object-position: 100% 7%;
+}

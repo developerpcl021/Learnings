@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://miro-jewellers.netlify.app/jewelry-repair" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Miro Jewellers: Your Premier Destination for Exquisite Jewelry - Discover a world of elegance and craftsmanship at Miro Jewellers." />
+    <title>Miro Jewellers - Fine Rings, Necklaces, and More || Jeweller Repair</title>
+    <!-- cdn url tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- first party plugin from official tailwindcss -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <!-- flowbite components url -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- //////////////////////// -->
+    <!-- custom css url -->
+    <link rel="stylesheet" href="assets/styles/index.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.mirojewelers.com/media/favicon/stores/1/M_Favicon1.png" />
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://www.mirojewelers.com/media/favicon/stores/1/M_Favicon1.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css"
+        integrity="sha512-EaaldggZt4DPKMYBa143vxXQqLq5LE29DG/0OoVenoyxDrAScYrcYcHIuxYO9YNTIQMgD8c8gIUU8FQw7WpXSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="/tailwind.cinfiq.js"></script>
+
+    <!-- glide slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
+
+    <style>
+        @media (max-width:576px) {
+            .glide__slide {
+                width: 296px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header and nav -->
+    <nav>
+        <div class="h-[100px] lg:h-[156px] bg-white flex justify-between items-center border-b-[1px] border-[#050505]">
+            <div class="max-w-[1420px] px-4 sm:px-8 larger:px-0 mx-auto flex justify-between xl:items-center w-full">
+                <div class="xl:hidden relative z-[999] cursor-pointer" id="openMenu">
+                    <img src="assets/image/png/menu-icon-dark.png" alt="menu-icon-dark"
+                        class="object-contain sm:w-[40px]" />
+                </div>
+
+                <a href="index.html" class="group">
+                    <img src="assets/image/png/miro-light-logo.png" alt="miro-logo-in-hero-banner"
+                        class="object-contain max-[310px]:w-[70px] w-[90px] sm:w-[120px] lg:w-[140px] xl:w-[228px] xl:h-[86px] group-hover:scale-[0.95] duration-100" />
+                </a>
+
+                <form action="@" class="w-1/3 relative hidden xl:block">
+                    <input type="text" placeholder="Search...." required
+                        class="w-full border-b-[1px] border-black border-0 focus:ring-0 focus:border-black text-sm md:text-md font-lato font-normal leading-normal tracking-[1.8px] relative z-20 bg-transparent" />
+                    <button type="submit" class="absolute top-[50%] translate-y-[-50%] right-[6%] z-30">
+                        <img src="assets/image/png/search-icon.png" alt="search-icon" class="object-contain" />
+                    </button>
+                </form>
+
+                <ul class="flex gap-x-3 sm:gap-x-14">
+                    <li>
+                        <a href="#Store" class="flex items-center flex-col group">
+                            <img src="assets/image/png/menu-location.png" alt="location-icon-on-menu"
+                                class="w-[20px] h-[25px] object-contain group-hover:translate-y-[-6px] duration-200" />
+                            <span
+                                class="block font-inter text-sm md:text-md font-normal text-black mt-1 hidden xl:block">Stores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Profile" class="flex items-center flex-col group">
+                            <img src="assets/image/png/menu-profile.png" alt="pmenu-profile-icon-on-menu"
+                                class="w-[20px] h-[25px] object-contain group-hover:translate-y-[-6px] duration-200" />
+                            <span
+                                class="block font-inter text-sm md:text-md font-normal text-black mt-1 hidden xl:block">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Wishlist" class="flex items-center flex-col group">
+                            <img src="assets/image/png/menu-wishlist.png" alt="wishlist-icon-on-menu"
+                                class="w-[20px] h-[25px] object-contain group-hover:translate-y-[-6px] duration-200" />
+                            <span
+                                class="block font-inter text-sm md:text-md font-normal text-black mt-1 hidden xl:block">Wishlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Cart" class="flex items-center flex-col group">
+                            <img src="assets/image/png/menu-cart.png" alt="cmenu-cart-icon-on-menu"
+                                class="w-[20px] h-[25px] object-contain group-hover:translate-y-[-6px] duration-200" />
+                            <span
+                                class="block font-inter text-sm md:text-md font-normal text-black mt-1 hidden xl:block">Cart</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form action="@" class="xl:hidden relative px-4 bg-white">
+            <input type="text" placeholder="Search...." required
+                class="w-full h-[60px] focus:ring-0 border-0 text-sm md:text-md font-lato font-normal leading-normal tracking-[1.8px] relative z-20 bg-transparent" />
+            <button type="submit" class="absolute top-[50%] translate-y-[-50%] right-[6%] z-30">
+                <img src="assets/image/png/search-icon.png" alt="search-icon" class="object-contain" />
+            </button>
+        </form>
+
+        <div class="bg-white w-[100%] sm:max-[1200px]:w-[60%] max-[1200px]:overflow-hidden flex justify-between items-center absolute xl:relative left-[-100%] xl:left-[50%] xl:translate-x-[-50%] top-0 z-[9999] duration-200 max-[1200px]:min-h-screen max-[1200px]:pb-6"
+            id="toggle-links">
+            <div
+                class="max-w-[1366px] px-4 sm:px-8 mx-auto w-full pt-8 xl:pt-0 max-[1200px]:max-h-screen overflow-y-auto">
+                <div class="xl:hidden relative" id="closeMenu">
+                    <div class="absolute right-[0px] inline-block cursor-pointer">
+                        <img src="assets/image/png/cross-icon.png" alt="cross-icon"
+                            class="object-contain w-[20px] sm:w-[30px]" />
+                    </div>
+                </div>
+                <ul class="xl:flex justify-between items-center gap-x-14 pt-10 xl:pt-0 overflow-y-hidden">
+                    <li class="group py-2 sm:py-6 xl:flex items-center cursor-pointer megaclicker">
+                        <a href="#EngagementRings"
+                            class="flex justify-between max-[1200px]:border-b border-gray-400 block max-[1200px]:pb-4 max-[1200px]:pr-2"
+                            data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="0"
+                            data-aos-duration="1200" data-aos-offSet="0">
+                            <span
+                                class="group-hover:text-[#bb5d1f] block font-inter text-sm md:text-md font-normal text-black max-[1200px]:mt-1">Engagement
+                                Rings
+                            </span>
+
+                            <p class="font-bold font-lato text-[22px] xl:hidden intend-extend-context">
+                                +
+                            </p>
+                        </a>
+                        <!-- mega menu -->
+                        <div
+                            class="xl:absolute xl:top-[100%] w-full xl:left-0 xl:right-0 bg-white xl:opacity-0 mih-[0px] hidden xl:block xl:group-hover:block xl:invisible group-hover:min-h-[540px] min-h-[0px] xl:group-hover:opacity-100 xl:group-hover:visible z-[9999] duration-200 py-5 xl:p-6 cursor-default showmegas">
+                            <div class="max-w-[1420px] mx-auto xl:flex">
+                                <div class="xl:w-1/4">
+                                    <h4 class="font-lato font-bold text-sm md:text-md text-slate-700">
+                                        CREATE YOUR OWN RING
+                                    </h4>
+                                    <ul class="mt-4">
+                                        <li class="group">
+                                            <a href="#StartwithSetting"
+                                                class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                <img src="assets/image/png/engage-ring-1.jpg" alt="engage-ring-1"
+                                                    class="w-[46px] h-[46px] object-contain inline-block mr-3" />
+                                                Start with Setting
+                                            </a>
+                                        </li>
+                                        <li class="group">
+                                            <a href="#StartwithwhiteDiamond"
+                                                class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                <img src="assets/image/png/engage-ring-2.jpg" alt="engage-ring-2"
+                                                    class="w-[46px] h-[46px] object-contain inline-block mr-3" />
+                                                Start with White Diamond
+                                            </a>
+                                        </li>
+                                        <li class="group">
+                                            <a href="#StartwithfancyDiamond"
+                                                class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                <img src="assets/image/png/engage-ring-3.jpg" alt="engage-ring-3"
+                                                    class="w-[46px] h-[46px] object-contain inline-block mr-3" />
+                                                Start with Fancy Diamond
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- ENGAGEMENT RING STYLES -->
+                                    <h4 class="font-lato font-bold text-sm md:text-md text-slate-700 mt-6">
+                                        ENGAGEMENT RING STYLES
+                                    </h4>
+                                    <ul class="mt-4">
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#Halo"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-1.jpg" alt="engage-style-1"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Halo
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#Solitare"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-2.jpg" alt="engage-style-2"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Solitare
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#Vintage"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-3.jpg" alt="engage-style-3"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Vintage
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#ThreeStone"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-4.jpg" alt="engage-style-4"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Three Stone
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#Tension"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-5.jpg" alt="engage-style-5"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Tension
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#ChannelSet"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-6.jpg" alt="engage-style-6"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Channel Set
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#SideStone"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-7.jpg" alt="engage-style-7"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Side Stone
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#pave"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/engage-style-8.jpg" alt="engage-style-8"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    pave
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                    <a href="#ViewallStyles"
+                                        class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 mt-6 inline-block">
+                                        View all Styles
+                                    </a>
+                                </div>
+                                <div class="xl:w-1/4 mt-4 xl:mt-0 xl:border-l pb-1 xl:border-light">
+                                    <h4
+                                        class="font-lato font-bold text-sm md:text-md text-slate-700 xl:ml-6 mt-6 xl:mt-0">
+                                        DESIGNERS
+                                    </h4>
+
+                                    <div class="flex flex-wrap justify-center gap-1">
+                                        <a href="#verragio" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/verragio.png" alt="verragio"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#kirkkara" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/kirk-kara.png" alt="kirk-kara "
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#jeffcooper" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/jeff-cooper.png" alt="jeff-cooper"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#danhov" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/danhov.png" alt="danhov"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#lashher" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/lashher.png" alt="lashher"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#mirodesigner" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/miro-designer.png" alt="miro-designer"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#crowenring" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/crowen-ring.png" alt="crowen-ring"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="xl:w-2/4 xl:border-l pb-1 border-light xl:pl-6">
+                                    <h4 class="font-lato font-bold text-sm md:text-md text-slate-700 mt-6 xl:mt-0">
+                                        SHOP BY METAL
+                                    </h4>
+
+                                    <div class="xl:flex items-start justify-between gap-1 mt-4">
+                                        <div>
+                                            <a href="#WHITEGOLD"
+                                                class="flex items-start font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-gray-100 rounded-full inline-block mr-2"></span>
+                                                WHITE GOLD
+                                            </a>
+                                            <a href="#YELLOWGOLD"
+                                                class="mt-4 flex items-start font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-yellow-300 rounded-full inline-block mr-2"></span>
+                                                YELLOW GOLD
+                                            </a>
+                                            <a href="#ROSEGOLD"
+                                                class="mt-4 flex items-start font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-red-300 rounded-full inline-block mr-2"></span>
+                                                ROSE GOLD
+                                            </a>
+                                            <a href="#PLATINUM"
+                                                class="mt-4 flex items-start font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-gray-300 rounded-full inline-block mr-2"></span>
+                                                PLATINUM
+                                            </a>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <img src=" assets/image/png/nav-square-ring.png" alt="nav-square-ring"
+                                                class="w-[36 0px] h-[21 6px] object-contain hover:scale-[1.05] duration-75" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="group py-2 sm:py-6 xl:flex items-center cursor-pointer megaclicker1">
+                        <a href="#EngagementRings"
+                            class="flex justify-between max-[1200px]:border-b border-gray-400 block max-[1200px]:pb-4 max-[1200px]:pr-2"
+                            data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="100"
+                            data-aos-duration="1200" data-aos-offSet="0">
+                            <span
+                                class="group-hover:text-[#bb5d1f] block font-inter text-sm md:text-md font-normal text-black max-[1200px]:mt-1">Wedding
+                                Bands
+                            </span>
+
+                            <p class="font-bold font-lato text-[22px] xl:hidden intend-extend-context1">
+                                +
+                            </p>
+                        </a>
+                        <!-- mega menu -->
+                        <div
+                            class="xl:absolute xl:top-[100%] w-full xl:left-0 xl:right-0 bg-white xl:opacity-0 mih-[0px] hidden xl:block xl:group-hover:block xl:invisible group-hover:min-h-[400px] min-h-[0px] xl:group-hover:opacity-100 xl:group-hover:visible z-[9999] duration-200 py-5 xl:p-6 cursor-default showmegas1">
+                            <div class="max-w-[1420px] mx-auto xl:flex">
+                                <div class="xl:w-1/4 pr-4">
+                                    <h4 class="font-lato font-bold text-sm md:text-md text-slate-700">
+                                        WOMEN
+                                    </h4>
+                                    <ul class="mt-4">
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#Classic"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-ring-1.jpg" alt="wedding-ring-1"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Classic
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#Eternity"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-ring-2.jpg" alt="wedding-ring-2"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Eternity
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#Anniversary"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-ring-3.jpg" alt="wedding-ring-3"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Anniversary
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#Stackable"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-ring-4.jpg" alt="wedding-ring-4"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Stackable
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </ul>
+
+                                    <!-- for mens -->
+                                    <h4 class="font-lato font-bold text-sm md:text-md text-slate-700">
+                                        MEN
+                                    </h4>
+                                    <ul class="mt-4">
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#Classic"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-classic-1.jpg"
+                                                        alt="wedding-classic-1"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Classic
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#Carved"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-classic-2.jpg"
+                                                        alt="wedding-classic-2"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Carved
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <li class="group w-1/2">
+                                                <a href="#Diamond"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-classic-3.jpg"
+                                                        alt="wedding-classic-3"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Diamond
+                                                </a>
+                                            </li>
+                                            <li class="group">
+                                                <a href="#AlternativeMetal"
+                                                    class="font-inter text-sm md:text-md font-normal text-black text-gray-700 hover:text-blue-600 flex items-center">
+                                                    <img src="assets/image/png/wedding-classic-4.jpg"
+                                                        alt="wedding-classic-4"
+                                                        class="w-[46px] h-[46px] object-contain inline-block mr-2" />
+                                                    Alternative Metal
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                                <div class="xl:w-1/4 mt-4 xl:mt-0 xl:border-l pb-1 xl:border-light">
+                                    <h4
+                                        class="font-lato font-bold text-sm md:text-md text-slate-700 xl:ml-6 mt-6 xl:mt-0">
+                                        DESIGNERS
+                                    </h4>
+
+                                    <div class="flex flex-wrap justify-center gap-1">
+                                        <a href="#verragio" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/verragio.png" alt="verragio"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#kirkkara" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/kirk-kara.png" alt="kirk-kara "
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#jeffcooper" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/jeff-cooper.png" alt="jeff-cooper"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#danhov" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/danhov.png" alt="danhov"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#lashher" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/lashher.png" alt="lashher"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#mirodesigner" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/miro-designer.png" alt="miro-designer"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                        <a href="#crowenring" class="mt-4 hover:opacity-75 duration-75">
+                                            <img src="assets/image/png/crowen-ring.png" alt="crowen-ring"
+                                                class="w-auto object-contain" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="xl:w-2/4 xl:border-l pb-1 border-light xl:pl-6">
+                                    <h4 class="font-lato font-bold text-sm md:text-md text-slate-700 mt-6 xl:mt-0">
+                                        SHOP BY METAL
+                                    </h4>
+
+                                    <div class="xl:flex items-start justify-between gap-1 mt-4">
+                                        <div>
+                                            <a href="#WHITEGOLD"
+                                                class="flex items-start font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-gray-100 rounded-full inline-block mr-2"></span>
+                                                WHITE GOLD
+                                            </a>
+                                            <a href="#YELLOWGOLD"
+                                                class="mt-4 flex items-start font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-yellow-300 rounded-full inline-block mr-2"></span>
+                                                YELLOW GOLD
+                                            </a>
+                                            <a href="#ROSEGOLD"
+                                                class="mt-4 flex items-start group font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-red-300 rounded-full inline-block mr-2"></span>
+                                                ROSE GOLD
+                                            </a>
+                                            <a href="#PLATINUM"
+                                                class="mt-4 flex items-start font-inter text-xsm md:text-sm font-normal text-black">
+                                                <span
+                                                    class="w-[14px] h-[14px] mt-1 border-4 border-gray-300 rounded-full inline-block mr-2"></span>
+                                                PLATINUM
+                                            </a>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <img src="assets/image/png/nav-white-rings.png" alt="nav-white-ring"
+                                                class="w-[36 0px] h-[21 6px] object-contain hover:scale-[1.05] duration-75" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="group py-2 sm:py-6 xl:flex items-center cursor-pointer">
+                        <a href="#Diamonds"
+                            class="xl:flex items-center flex-col max-[1200px]:border-b border-gray-400 block max-[1200px]:pb-4"
+                            data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="200"
+                            data-aos-duration="1200" data-aos-offSet="0">
+                            <span
+                                class="group-hover:text-[#bb5d1f] group-focus:text-[#bb5d1f] block font-inter text-sm md:text-md font-normal text-black max-[1200px]:mt-1">Diamonds
+                            </span>
+                        </a>
+                    </li>
+                    <li class="group py-2 sm:py-6 xl:flex items-center cursor-pointer">
+                        <a href="#Jewelry"
+                            class="xl:flex items-center flex-col max-[1200px]:border-b border-gray-400 block max-[1200px]:pb-4"
+                            data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="300"
+                            data-aos-duration="1200" data-aos-offSet="0">
+                            <span
+                                class="group-hover:text-[#bb5d1f] group-focus:text-[#bb5d1f] block font-inter text-sm md:text-md font-normal text-black max-[1200px]:mt-1">Jewelry
+                            </span>
+                        </a>
+                    </li>
+                    <li class="group py-2 sm:py-6 xl:flex items-center cursor-pointer">
+                        <a href="custom-design.html"
+                            class="xl:flex items-center flex-col max-[1200px]:border-b border-gray-400 block max-[1200px]:pb-4"
+                            data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="400"
+                            data-aos-duration="1200" data-aos-offSet="0">
+                            <span
+                                class="group-hover:text-[#bb5d1f] group-focus:text-[#bb5d1f] block font-inter text-sm md:text-md font-normal text-black max-[1200px]:mt-1">Custom
+                                Design
+                            </span>
+                        </a>
+                    </li>
+                    <li class="group py-2 sm:py-6 xl:flex items-center cursor-pointer">
+                        <a href="about.html"
+                            class="xl:flex items-center flex-col max-[1200px]:border-b border-gray-400 block max-[1200px]:pb-4"
+                            data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="500"
+                            data-aos-duration="1200" data-aos-offSet="0">
+                            <span
+                                class="group-hover:text-[#bb5d1f] group-focus:text-[#bb5d1f] block font-inter text-sm md:text-md font-normal text-black max-[1200px]:mt-1">About
+                            </span>
+                        </a>
+                    </li>
+                    <li class="group py-2 sm:py-6 xl:flex items-center cursor-pointer">
+                        <a href="jewelry-repair.html"
+                            class="xl:flex items-center flex-col max-[1200px]:border-b border-gray-400 block max-[1200px]:pb-4"
+                            data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="600"
+                            data-aos-duration="1200" data-aos-offSet="0">
+                            <span
+                                class="group-hover:text-[#bb5d1f] group-focus:text-[#bb5d1f] block font-inter text-sm md:text-md font-normal text-black max-[1200px]:mt-1">Repairs
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div
+            class="bg-hero-banner-repairs bg-cover bg-no-repeat bg-center bg-black min-h-screen flex items-center relative before:content('') before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-black before:opacity-75">
+            <div class="container mt-[36px] lg:pl-6 grow">
+                <h1 class="font-lato text-lg md:text-xl xl:text-2xl font-normal text-white" data-aos="fade-up"
+                    data-aos-easing="ease-in-back" data-aos-delay="0" data-aos-duration="1500">
+                    JEWELRY REPAIR
+                </h1>
+                <p class="font-lato font-normal text-sm md:text-lg text-white tracking-[2.4px] xl:w-[810px] md:leading-10 mt-4 md:mt-10"
+                    data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="150" data-aos-duration="1500">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi enim
+                    dui, bibendum vel blandit et, interdum eget urna.
+                    Integer a metus
+                    purus.
+                </p>
+                <div data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="250" data-aos-duration="1500">
+                    <a href="#learnmore"
+                        class="font-lato text-xsm md:text-md font-normal tracking-[1.8px] hover:text-white px-10 py-2 md:py-4 bg-white uppercase hover:bg-transparent border-white inline-block border-2 border-solid duration-300 rounded-md mt-4 md:mt-10">Lorem
+                        ipsur</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- *****end****** -->
+
+    <main>
+
+        <!-- TRY your favorite design at HOME -->
+        <section class="py-10 md:py-20 bg-white">
+            <div class="container">
+                <div class="h-[200px] md:h-[300px] xl:h-[600px]">
+                    <img src="/diamond-neklace1.png" alt="a rounded diamond neklace set into in frame"
+                        class="w-full h-full object-cover object-bottom duration-300 animate-image" />
+                </div>
+
+                <div class="md:text-center mt-4 md:mt-10">
+                    <h2 class="font-lato font-normal text-lg md:text-xl text-black uppercase" data-aos="fade-up"
+                        data-aos-easing="ease-in-back" data-aos-delay="0" data-aos-duration="1200">
+                        DEDICATION TO EXCELLENCE
+                    </h2>
+                    <p class="font-lato text-sm md:text-md font-normal leading-6 md:leading-9 tracking-[1.8px] capitalize md:mt-6 xxl:w-[87%] mx-auto"
+                        data-aos="fade-up" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-duration="1200">
+                        Miro Jewelers is Denver’s premier jewelry and repair
+                        destination in Denver, Colorado. Located in
+                        Centennial, Colorado.
+                        The jewelry experts at Miro Jewelers proudly service
+                        clients in Centennial, Denver,
+                        Westminister, Arvada, Highlands Ranch, Littleton,
+                        Greenwood Village, Cherry Hills and more! In
+                        addition, we are authorized retailers for many of
+                        the top bridal and fashion designers
+                        including: Verragio, Danhov, Jeff Cooper, Gabriel
+                        Co., Kirk Kara, Crown ring and many more.
+                    </p>
+
+                    <div class="text-center hidden" data-aos="fade-up" data-aos-easing="ease-in-back"
+                        data-aos-delay="100" data-aos-duration="1200">
+                        <a href="#learnmore"
+                            class="font-lato text-xsm md:text-md font-normal tracking-[1.8px] text-white hover:text-black px-6 md:px-10 py-2 md:py-4 bg-black uppercase hover:bg-transparent border-black inline-block border-2 border-solid duration-300 rounded-md mt-6 md:mt-[70px]">Lorem
+                            ipsur</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- *****end****** -->
+    </main>
+
+    <footer>
+
+        <!-- SUBSCRIBE TO OUR NEWSLETTER -->
+        <section class="bg-black py-8 md:py-[74px]">
+            <div class="container">
+                <h2 class="font-lato text-md md:text-xl font-normal text-white text-center">SUBSCRIBE
+                    TO OUR NEWSLETTER
+                </h2>
+                <p
+                    class="font-lato text-sm md:text-md font-normal leading-6 md:leading-9 tracking-[1.8px] capitalize text-white tracking-[2.4px] md:leading-10 mt-2 md:mt-10 text-center xxl:w-[94%]">
+                    At Miro we realize that your time is valuble and the
+                    intimidation of shopping is stores can be
+                    overwhelming... so we came up with a solution. </p>
+                <form action="@" class="md:flex justify-between items-center mt-6 md:mt-[70px] xl:w-[994px] mx-auto">
+                    <input type="email" required
+                        class="bg-white text-sm md:text-md font-lato font-normal leading-normal tracking-[1.8px] placeholder:uppercase h-[40px] md:h-[80px] w-full md:w-3/4 md:pl-[33px] rounded-md ring-0 focus:ring-black focus:border-black outline-none"
+                        placeholder="EMAIL ADDRESS">
+                    <div class="text-center md:w-1/4 md:ml-5">
+                        <button type="submit"
+                            class="font-lato text-xsm md:text-md font-normal tracking-[1.8px] hover:text-white px-10  h-[40px] md:h-[80px]  flex items-center justify-center bg-white uppercase hover:bg-transparent border-white inline-block border-2 border-solid duration-300 rounded-md mt-3 md:mt-0 w-full">SIGN
+                            UP</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- *****end****** -->
+
+        <!-- footer links -->
+        <section class="bg-white closeup-animate">
+            <div class="w-full px-4 lg:px-8 xxl:px-24 pt-10 md:pt-16 pb-8">
+                <!-- footer logo -->
+                <div class="flex justify-center">
+                    <a href="/index.html" class="group">
+                        <img src="assets/image/png/footer-logo.png" alt="footer-logo"
+                            class="w-[200px] md:w-[228px] h-[50px] md:h-[86px] object-contain group-hover:scale-[0.95] duration-100" />
+                    </a>
+                </div>
+
+                <!-- media links -->
+                <div class="flex items-center justify-center gap-6 mt-6 md:mt-[50px]">
+                    <a href="#facebook" class="group">
+                        <img src="assets/image/png/facebook.png" alt="facebook-icon"
+                            class="w-[24px] h-[24px] object-contain group-hover:translate-y-[-4px] duration-200" />
+                    </a>
+                    <a href="#twitter" class="group">
+                        <img src="assets/image/png/twitter.png" alt="twitter-icon"
+                            class="w-[24px] h-[24px] object-contain group-hover:translate-y-[-4px] duration-200" />
+                    </a>
+                    <a href="#youtube" class="group">
+                        <img src="assets/image/png/youtube.png" alt="youtube-icon"
+                            class="w-[24px] h-[24px] object-contain group-hover:translate-y-[-4px] duration-200" />
+                    </a>
+                </div>
+
+                <!-- payment cards -->
+                <div class="max-w-[724px] h-[68px] mx-auto mt-6 md:mt-[50px]">
+                    <img src="assets/image/png/payment-cards.png" alt="payment-cards"
+                        class="w-full h-full object-contain" />
+                </div>
+
+                <!-- footer link -->
+                <div class="md:flex flex-wrap items-start justify-between mt-6 md:mt-[72px]">
+                    <div class="md:w-1/2 lg:w-1/4 md:pr-6 xl:pl-4">
+                        <div class="lg:min-h-[74px] xl:min-h-[84px] max-lg:border-b-2 pb-2">
+                            <h4 class="font-lato font-normal text-sm md:text-md md:text-lg text-black">
+                                EXPERIENCE MIRO <br class="max-xl:hidden" />
+                                JEWELERS
+                            </h4>
+                        </div>
+                        <ul class="pl-3 mt-2">
+                            <li class="list-disc">
+                                <a href="custom-design.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Custom
+                                    Design</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="jewelry-repair.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Jewelry
+                                    Repair</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="#CurrentPromotions"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Current
+                                    Promotions</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="#DetermineRingSize"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Determine
+                                    Your Ring Size</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 lg:w-1/4 lg:pl-4 lg:pr-6 mt-4 md:mt-0">
+                        <div class="lg:min-h-[74px] xl:min-h-[84px] max-lg:border-b-2 pb-2">
+                            <h4 class="font-lato font-normal text-sm md:text-md md:text-lg text-black">
+                                WHY MIRO JEWELERS ?
+                            </h4>
+                        </div>
+                        <ul class="pl-3 mt-2">
+                            <li class="list-disc">
+                                <a href="#CustomDesign"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Who
+                                    We Are</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="lifetime-warranty.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Lifetime
+                                    Warranty</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="#CurrentPromotions"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Lifetime
+                                    Free Upgrade</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="shipping-information.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Free
+                                    Shipping</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="#DetermineRingSize"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Financing
+                                    Options</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 lg:w-1/4 md:pr-6 xl:pl-24 mt-4 md:mt-8 lg:mt-0">
+                        <div class="lg:min-h-[74px] xl:min-h-[84px] max-lg:border-b-2 pb-2">
+                            <h4 class="font-lato font-normal text-sm md:text-md md:text-lg text-black">
+                                ABOUT MIRO <br class="max-xl:hidden" />
+                                JEWELERS
+                            </h4>
+                        </div>
+                        <ul class="pl-3 mt-2">
+                            <li class="list-disc">
+                                <a href="contact-us.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Contact
+                                    Us</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="about.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">About
+                                    Us</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="terms&condition.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Terms
+                                    & Conditions</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="privacy-policy-cookie-restriction-mode.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Privacy
+                                    Policy</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="return-policy.html"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Return
+                                    Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 lg:w-1/4 lg:pl-4 mt-4 md:mt-8 lg:mt-0">
+                        <div class="lg:min-h-[74px] xl:min-h-[84px] max-lg:border-b-2 pb-2">
+                            <h4 class="font-lato font-normal text-sm md:text-md md:text-lg text-black">
+                                VISIT US
+                            </h4>
+                        </div>
+                        <ul class="pl-3 mt-2">
+                            <li class="list-disc">
+                                <a href="#CustomDesign"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">6750
+                                    S. Emporia St.</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="#JewelryRepair"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Centennial,
+                                    Colorado 80112</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="#CurrentPromotions"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">Regular
+                                    Hours : Tue - Fri : 10 am - 6
+                                    <br class="max-xl:hidden" />
+                                    pm / Sat: 10 am - 5 pm</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="tel:"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">303.393.8881</a>
+                            </li>
+                            <li class="list-disc mt-1">
+                                <a href="mailto:info@mirojewelers.com"
+                                    class="font-lato font-normal text-sm md:text-md leading-6 md:leading-9 duration-100 hover:border-b-2 border-[#34495e]">info@mirojewelers.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h5 class="font-lato font-normal text-sm md:text-lg text-black leading-7 text-center mt-6 md:mt-[45px]">
+                    © 2023
+                    <a href="/index.html" class="border-b-2 border-gray-600 duration-100 hover:pb-1">MiroJewelers</a>.
+                    All Rights Reserved
+                </h5>
+            </div>
+        </section>
+        <!-- *****end****** -->
+    </footer>
+
+    <!-- flowbite components url -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- /////////////////////// -->
+
+    <!-- custom js url -->
+    <script src="assets/js/index.js"></script>
+    <!-- // aos -->
+    <script>
+        AOS.init({
+            once: true,
+        });
+
+        // custom image scale up and down image animation
+        window.addEventListener("scroll", function () {
+            const scrollY = window.scrollY;
+            const top = window.screen.top;
+            const animationend = document.querySelector(".closeup-animate");
+            const animationstart = document.querySelector(".animate-image");
+            const startingpoint = animationstart.offsetTop;
+            const endpoint = animationend.offsetTop;
+            const animatesectionheight = animationstart.offsetHeight;
+
+            // Calculate the scale value based on scroll position within section 3
+            let scale = 0.75;
+
+            if (
+                scrollY >= startingpoint - window.innerHeight &&
+                scrollY <= startingpoint
+            ) {
+                scale =
+                    0.75 +
+                    ((startingpoint - scrollY + window.innerHeight) / window.innerHeight) *
+                    0.15;
+            } else if (animatesectionheight >= top && endpoint >= top) {
+                scale =
+                    0.75 +
+                    ((startingpoint - scrollY + window.innerHeight) / window.innerHeight) *
+                    0.15;
+            }
+
+            // Apply the scale transform to the third section
+            animationstart.style.transform = `scale(${scale})`;
+        });
+    </script>
+    <!-- ////// -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.5.0/glide.min.js"></script>
+    <script>
+        const config = {
+            type: 'carousel',
+            autoplay: 2000,
+            animationDuration: 500,
+            mouseEnter: stop,
+            startAt: 0,
+            perView: 4,
+            gap: 32,
+            breakpoints: {
+                1280: {
+                    perView: 3,
+                },
+                1024: {
+                    perView: 2,
+                },
+                768: {
+                    perView: 1,
+                }
+            }
+        }
+        new Glide('.glide', config).mount()
+    </script>
+</body>
+
+</html>

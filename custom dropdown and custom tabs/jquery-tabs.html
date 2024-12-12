@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Tabs</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .checked-label {
+            background-color: yellow;
+        }
+
+        .tab-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="checkbox" id="checkbox1" checked>
+    <label for="checkbox1" id="label1">Tab 1</label>
+
+    <input type="checkbox" id="checkbox2">
+    <label for="checkbox2" id="label2">Tab 2</label>
+
+    <div id="content1" class="tab-content">
+        <p>Content for Tab 1</p>
+    </div>
+
+    <div id="content2" class="tab-content">
+        <p>Content for Tab 2</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            function updateTabs() {
+                if ($('#checkbox1').is(':checked')) {
+                    $('#label1').addClass('checked-label');
+                    $('#content1').show();
+                } else {
+                    $('#label1').removeClass('checked-label');
+                    $('#content1').hide();
+                }
+
+                if ($('#checkbox2').is(':checked')) {
+                    $('#label2').addClass('checked-label');
+                    $('#content2').show();
+                } else {
+                    $('#label2').removeClass('checked-label');
+                    $('#content2').hide();
+                }
+            }
+
+            $('input[type="checkbox"]').change(function () {
+                // Allow only one checkbox to be checked at a time
+                $('input[type="checkbox"]').not(this).prop('checked', false);
+                updateTabs();
+            });
+
+            // Initial update on page load
+            updateTabs();
+        });
+    </script>
+
+</body>
+
+</html>

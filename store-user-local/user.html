@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded shadow-md w-96">
+        <h2 class="text-2xl font-bold mb-6 text-center">Welcome!</h2>
+        <div id="userInfo" class="text-center"></div>
+        <button id="logout" class="mt-4 w-full bg-red-500 text-white rounded py-2 hover:bg-red-600">Logout</button>
+    </div>
+
+    <script>
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+        if (!loggedInUser) {
+            window.location.href = "index.html"; // Redirect to login if not logged in
+        } else {
+            document.getElementById("userInfo").innerText = `Logged in as: ${loggedInUser.username}`;
+        }
+
+        document.getElementById("logout").addEventListener("click", function () {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "index.html"; // Redirect to login page
+        });
+    </script>
+</body>
+</html>

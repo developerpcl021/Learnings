@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Baseball Uniform Customizer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #uniform {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        #uniform img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #colors {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #colors label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #colors input {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Baseball Uniform Customizer</h1>
+    <div id="uniform">
+        <img src="Screenshot 2023-09-01 112621.png" alt="Baseball uniform">
+        <div id="colors">
+            <label for="color1">Color 1:</label>
+            <input type="color" id="color1" value="#ff0000">
+            <label for="color2">Color 2:</label>
+            <input type="color" id="color2" value="#00ff00">
+            <label for="color3">Color 3:</label>
+            <input type="color" id="color3" value="#0000ff">
+        </div>
+    </div>
+    <script>
+        const color1 = document.getElementById('color1');
+        const color2 = document.getElementById('color2');
+        const color3 = document.getElementById('color3');
+        const uniform = document.getElementById('uniform');
+        color1.addEventListener('change', () => {
+            uniform.style.backgroundColor = color1.value;
+        });
+        color2.addEventListener('change', () => {
+            uniform.style.borderColor = color2.value;
+        });
+        color3.addEventListener('change', () => {
+            uniform.style.color = color3.value;
+        });
+    </script>
+</body>
+
+</html>

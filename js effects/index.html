@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll & Cursor Animation</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .animation-trigger,
+        .animated-element {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .animated-element {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .cursor-follower {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: #f00;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            /* Prevent clicks on the follower */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="animation-trigger">
+            <h1>Welcome! Scroll down to see the animation.</h1>
+        </div>
+        <div class="animated-element">This element animates on scroll.</div>
+        <div class="cursor-follower"></div>
+    </div>
+    
+    <script>
+        const animatedElement = document.querySelector('.animated-element');
+        const cursorFollower = document.querySelector('.cursor-follower');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const triggerPosition = document.querySelector('.animation-trigger').offsetTop;
+
+            if (scrollPosition >= triggerPosition) {
+                animatedElement.style.opacity = 1;
+            } else {
+                animatedElement.style.opacity = 0;
+            }
+        });
+
+        document.addEventListener('mousemove', (event) => {
+            cursorFollower.style.top = event.clientY + 'px';
+            cursorFollower.style.left = event.clientX + 'px';
+        });
+    </script>
+</body>
+
+</html>

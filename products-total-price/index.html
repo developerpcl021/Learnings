@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Calculator</title>
+    <style>
+        .tab-content>h1 {
+            text-align: center;
+        }
+
+        .tabbed {
+            overflow-x: hidden;
+        }
+
+        .tabbed [type="radio"] {
+            /* hiding the inputs */
+            display: none;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            list-style: none;
+            padding: 0;
+        }
+
+        .tab>label {
+            display: block;
+            margin-bottom: -1px;
+            padding: 12px 20px;
+            color: #000000;
+            font-size: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .tab:hover label {
+            color: #9c9c9c;
+        }
+
+        .tab-content {
+            display: none;
+            /* color: #777; */
+        }
+
+        .tabbed [type="radio"]:nth-of-type(1):checked~.tabs .tab:nth-of-type(1) label,
+        .tabbed [type="radio"]:nth-of-type(2):checked~.tabs .tab:nth-of-type(2) label {
+            border-bottom-color: #fff;
+            border-top-color: #B721FF;
+            background: #fff;
+            color: #9c9c9c;
+        }
+
+        .tabbed [type="radio"]:nth-of-type(1):checked~.tab-content:nth-of-type(3),
+        .tabbed [type="radio"]:nth-of-type(1):checked~.tab-content:nth-of-type(1),
+        .tabbed [type="radio"]:nth-of-type(2):checked~.tab-content:nth-of-type(2) {
+            display: block;
+        }
+
+
+        .totalMrp {
+            border: 2px solid black;
+            width: 50%;
+            margin: 0px auto;
+            padding: 20px;
+        }
+
+        .totalMrp>.mrp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        .totalMrp>.monthlydiscount {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-top: 12px;
+            color: #51a75d;
+        }
+
+        .totalMrp>.filtertotals {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .hrLine {
+            height: 2px;
+            background-color: #000000;
+            margin: 8px 0px;
+        }
+
+        .tab-cont ent-3,
+        .tab-con tent-4 {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="tabbed">
+        <input type="radio" id="product-1" value="product-1" name="css-tabs" checked>
+        <input type="radio" id="product-2" value="product-2" name="css-tabs">
+        <ul class="tabs">
+            <li class="tab">
+                <label for="product-1">product-1</label>
+            </li>
+            <li class="tab">
+                <label for="product-2">product-2</label>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <h1>Product-1</h1>
+        </div>
+        <div class="tab-content">
+            <h1>Product-2</h1>
+        </div>
+
+
+        <div class="totalMrp">
+            <div class="mrp">
+                <span>MSRP</span>
+                <span>
+                    $ <span id="productAmount"></span>
+                </span>
+            </div>
+            <div class="monthlydiscount">
+                <span>Monthly discount</span>
+                <span>
+                    -$ <span id="productdiscount"></span>
+                </span>
+            </div>
+            <div class="hrLine"></div>
+            <div class="filtertotals">
+                <div>Final Price:
+                    <span id="productNameInTotal">
+                        product-1
+                    </span>
+                </div>
+                <span>
+
+                    $ <span id="totalcutdiscount"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        let productNameInTotal = document.getElementById('productNameInTotal');
+        let productAmount = parseFloat('11327.57');
+        let discount = 4.8560 / 100;
+        let productdiscount = productAmount * discount;
+        let totalcutdiscount = productAmount - productdiscount;
+        document.getElementById('totalcutdiscount').innerHTML = totalcutdiscount.toFixed(2);
+        document.getElementById('productAmount').innerHTML = productAmount;
+        document.getElementById('productdiscount').innerHTML = productdiscount.toFixed(2);
+
+        function myfunction(event) {
+            let proval = event.target.value
+            productNameInTotal.innerHTML = proval
+            if (proval == 'product-1') {
+                let productAmount = parseFloat('11327.57');
+                let discount = 4.8560 / 100;
+                let productdiscount = productAmount * discount;
+                document.getElementById('productAmount').innerHTML = productAmount;
+                document.getElementById('productdiscount').innerHTML = productdiscount.toFixed(2);
+                let totalcutdiscount = productAmount - productdiscount;
+                document.getElementById('totalcutdiscount').innerHTML = totalcutdiscount.toFixed(2);
+            } else {
+                let productAmount = parseFloat('8306.47')
+                let discount = 4.8031 / 100;
+                let productdiscount = productAmount * discount;
+                document.getElementById('productAmount').innerHTML = productAmount;
+                document.getElementById('productdiscount').innerHTML = productdiscount.toFixed(2);
+                let totalcutdiscount = productAmount - productdiscount;
+                document.getElementById('totalcutdiscount').innerHTML = totalcutdiscount.toFixed(2);
+            }
+        }
+        document.querySelectorAll("input[name='css-tabs']").forEach((input) => {
+            input.addEventListener('change', myfunction);
+        });
+
+
+
+
+
+        var tab1 = document.getElementById('product-1')
+        if (tab1.checked) {
+            var INPERSON = 0.0072;
+        } else {
+            INPERSON = 0
+        }
+        console.log(INPERSON)
+    </script>
+</body>
+
+</html>

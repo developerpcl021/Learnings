@@ -1,0 +1,12 @@
+button {
+  background-color: rgb(193, 236, 164) !important;
+  text-align: center;
+  padding: 12px 24px;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+}
+div{
+  text-align: center;
+}

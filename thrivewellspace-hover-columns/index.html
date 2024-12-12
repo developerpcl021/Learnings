@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .column {
+            width: 400px;
+            height: 400px;
+            border-left: 1px solid #000;
+        }
+
+        img {
+            opacity: 0;
+            height: 100%;
+        }
+
+        .main-div {
+            display: flex;
+            justify-content: space-between;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 400px;
+            transition: background-image 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div" style="background-image: url(assets/card1.jpg);">
+        <div class="dd">
+            <div class="column">
+                <img src="assets/card1.jpg" alt="" width="100%" class="imgs">
+            </div>
+        </div>
+        <div class="dd">
+            <div class="column">
+                <img src="assets/card2.jpg" alt="" width="100%" class="imgs">
+            </div>
+        </div>
+        <div class="dd">
+            <div class="column">
+                <img src="assets/card3.jpg" alt="" width="100%" class="imgs">
+            </div>
+        </div>
+        <div class="dd">
+            <div class="column">
+                <img src="assets/card4.jpg" alt="" width="100%" class="imgs">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.dd > .column img');
+
+        images.forEach(image => {
+            image.addEventListener('mouseover', function () {
+                const imageUrl = image.getAttribute("src");
+                document.querySelector(".main-div").style.backgroundImage = `url(${imageUrl})`;
+            });
+        });
+    </script>
+
+    <script>
+        const images1 = document.querySelectorAll('.cards-img img');
+
+        images1.forEach(image => {
+            image.addEventListener('mouseover', function () {
+                const imageUrl = image.getAttribute("src");
+                document.querySelector(".main-div").style.backgroundImage = `url(${imageUrl})`;
+            });
+        });
+    </script>
+
+    <!-- <script>
+        const bgchnaged = document.querySelectorAll('.elementor-element-559c27e .elementor-element');
+        const image = document.querySelectorAll('.cards-imgimg');
+
+        bgchnaged.forEach(image => {
+            image.addEventListener('mouseover', function () {
+                const imageUrl = image.getAttribute("src");
+                document.querySelector(".elementor-element-559c27e").style.backgroundImage = `url(${imageUrl})`;
+            });
+        });
+    </script> -->
+
+</body>
+
+</html>
