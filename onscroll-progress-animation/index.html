@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Curved Path</title>
+    <style>
+        /* Basic Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background: #000;
+            /* Space background color */
+            color: #fff;
+        }
+
+        /* Sections */
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            position: relative;
+            color: #fff;
+        }
+
+        .section:nth-child(even) {
+            background: linear-gradient(120deg, #222, #333);
+        }
+
+        /* Starry Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* Rocket Styling */
+        .rocket-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            z-index: 10;
+            transition: all .02s linear;
+            opacity: 0;
+        }
+
+        .rocket-container div:after {
+            content: "";
+            width: 80px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 63%;
+            left: -26%;
+            transform: rotate(4deg);
+            z-index: -1;
+            background-color: #ffff007d;
+            clip-path: polygon(100% 0%, 100% 50%, 0% 100%, 50% 0%);
+            animation: flick .06s infinite linear;
+        }
+
+        @keyframes flick {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        .rocket-container div {
+            width: 150px;
+            height: auto;
+            transform-origin: center;
+            transition: all 0.3s ease;
+            /* opacity: 40%; */
+        }
+
+        .rocket-turn {
+            transform: rotate(180deg);
+            /* U-turn effect */
+        }
+
+        @keyframes grow-progress {
+            from {
+                transform: scaleX(0);
+            }
+
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        #progress {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 1em;
+            background: red;
+
+            transform-origin: 0 100%;
+            animation: grow-progress linear;
+            animation-timeline: scroll();
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress"></div>
+    <!-- Rocket -->
+    <div class="rocket-container" id="rocket">
+        <div>
+            <img src="https://civmos.com/staging/wp-content/themes/custom-theme/assets/image/png-jpg/rocket-on-partners.png"
+                alt="Rocket">
+        </div>
+    </div>
+
+    <!-- Sections -->
+    <div class="section">Section 1</div>
+    <div class="section">Section 2</div>
+    <div class="section">Section 3</div>
+    <div class="section">Section 4</div>
+    <div class="section">Section 5</div>
+    <div class="section">Section 6</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const rocket = document.getElementById('rocket');
+        let bodyHeight = document.body.scrollHeight - window.innerHeight; // Total scrollable height
+        let maxLeft = window.innerWidth - 150; // Maximum horizontal movement for the rocket
+        let maxTop = window.innerHeight - 150; // Maximum vertical movement for the rocket
+        let lastScrollTop = 0; // Track last scroll position for U-turn detection
+
+        // Function to update dimensions when screen size changes
+        const updateDimensions = () => {
+            bodyHeight = document.body.scrollHeight - window.innerHeight;
+            maxLeft = window.innerWidth - 150;
+            maxTop = window.innerHeight - 150;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Current scroll position
+            const scrollPercent = scrollTop / bodyHeight; // Scroll percentage (0 to 1)
+            const rocketLeft = Math.sin(scrollPercent * Math.PI * 6) * maxLeft * 0.4 + maxLeft / 2; // Sine wave for left-right motion
+            const rocketTop = Math.cos(scrollPercent * Math.PI * 3) * maxTop * 0.3 + maxTop / 2; // Cosine wave for up-down motion
+            rocket.style.opacity = `0.6`;
+            rocket.style.transform = `translate(${rocketLeft}px, ${rocketTop}px)rotate(130deg)scale(0.6)`;
+        };
+
+        // Add resize event listener
+        window.addEventListener('load', updateDimensions);
+        window.addEventListener('resize', updateDimensions);
+
+
+        // Add scroll event listener
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Current scroll position
+            const scrollPercent = scrollTop / bodyHeight; // Scroll percentage (0 to 1)
+
+            // Create a curved "@"-like path using sinusoidal functions
+            const rocketLeft = Math.sin(scrollPercent * Math.PI * 6) * maxLeft * 0.4 + maxLeft / 2; // Sine wave for left-right motion
+            const rocketTop = Math.cos(scrollPercent * Math.PI * 3) * maxTop * 0.3 + maxTop / 2; // Cosine wave for up-down motion
+
+            // Check if the scroll direction is upwards (U-turn)
+            if (scrollTop === 0) {
+                rocket.querySelector('div').classList.remove('rocket-turn'); // Ensure U-turn class is removed
+            } else if (scrollTop < lastScrollTop) {
+                rocket.querySelector('div').classList.add('rocket-turn'); // Add U-turn class for upward scrolling
+            } else {
+                rocket.querySelector('div').classList.remove('rocket-turn'); // Remove U-turn class for downward scrolling
+            }
+
+
+            // Update the rocket's position
+            rocket.style.transform = `translate(${rocketLeft}px, ${rocketTop}px)rotate(130deg)scale(0.6)`;
+
+            // Update the last scroll position
+            lastScrollTop = scrollTop;
+        });
+
+        // Initialize dimensions on page load
+        updateDimensions();
+
+
+    </script>
+
+</body>
+
+</html>
