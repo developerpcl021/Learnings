@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header & First Column Table</title>
+    <style>
+        .table-container {
+            width: 500px;
+            height: 500px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Sticky Header */
+        thead th {
+            position: sticky;
+            top: 0;
+            background: #f8f9fa;
+            z-index: 10; /* Ensure header stays above other content */
+        }
+
+        /* Sticky First Column */
+        tbody td:first-child {
+            position: sticky;
+            left: 0;
+            background: #fff;
+            z-index: 11;
+            border-right: 1px solid #ddd;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            min-width: 120px; /* Ensures columns have space */
+        }
+
+        tbody td:first-child {
+            background: #f1f1f1; /* Slightly different background for sticky first column */
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Job</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>28</td>
+                <td>New York</td>
+                <td>USA</td>
+                <td>Engineer</td>
+                <td>$70,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>32</td>
+                <td>Los Angeles</td>
+                <td>USA</td>
+                <td>Designer</td>
+                <td>$65,000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Michael Johnson</td>
+                <td>40</td>
+                <td>Chicago</td>
+                <td>USA</td>
+                <td>Manager</td>
+                <td>$85,000</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Emily Davis</td>
+                <td>26</td>
+                <td>Miami</td>
+                <td>USA</td>
+                <td>Writer</td>
+                <td>$50,000</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Chris Brown</td>
+                <td>35</td>
+                <td>San Francisco</td>
+                <td>USA</td>
+                <td>Developer</td>
+                <td>$95,000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Olivia Wilson</td>
+                <td>29</td>
+                <td>Seattle</td>
+                <td>USA</td>
+                <td>Doctor</td>
+                <td>$120,000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>David Lee</td>
+                <td>45</td>
+                <td>Boston</td>
+                <td>USA</td>
+                <td>Professor</td>
+                <td>$100,000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Sophia Miller</td>
+                <td>30</td>
+                <td>Denver</td>
+                <td>USA</td>
+                <td>Consultant</td>
+                <td>$80,000</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>James Anderson</td>
+                <td>50</td>
+                <td>Dallas</td>
+                <td>USA</td>
+                <td>Architect</td>
+                <td>$110,000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Emma White</td>
+                <td>27</td>
+                <td>Atlanta</td>
+                <td>USA</td>
+                <td>Marketing</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Emma White</td>
+                <td>27</td>
+                <td>Atlanta</td>
+                <td>USA</td>
+                <td>Marketing</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Emma White</td>
+                <td>27</td>
+                <td>Atlanta</td>
+                <td>USA</td>
+                <td>Marketing</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Emma White</td>
+                <td>27</td>
+                <td>Atlanta</td>
+                <td>USA</td>
+                <td>Marketing</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Emma White</td>
+                <td>27</td>
+                <td>Atlanta</td>
+                <td>USA</td>
+                <td>Marketing</td>
+                <td>$60,000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
